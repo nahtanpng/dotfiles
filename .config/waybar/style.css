@@ -1,0 +1,70 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: JetBrainsMono, sans-serif;
+  font-size: 14px;
+  min-height: 0;
+  padding-left: 2;
+  padding-right: 2;
+  margin: 0 0 1px 0;
+}
+
+window#waybar {
+  border-radius: 5px;
+  background: rgba(40, 40, 40, 0.9);
+  border-bottom: 2px solid #ebdbb2;
+  color: #ebdbb2;
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 3px 6px;
+  background: none;
+  color: #bbbbbb;
+}
+
+#workspaces button.active {
+  color: #000;
+  background-color: #ebdbb2;
+  border-radius: 3px;
+  margin: 2px;
+  border: none;
+}
+
+#workspaces button:hover {
+  color: transparent;
+  background-color: #fff;
+  color: #000;
+  border-radius: 3px;
+  margin: 2px;
+  border: none;
+}
+
+#pulseaudio {
+  color: #ffffff;
+}
+
+#window {
+  color: #ebdbb2;
+}
+
+#custom-datetime {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+#custom-spotify {
+  margin-left: 10px;
+  color: #689d6a;
+}
+
+#custom-status,
+#custom-ramcpu,
+#pulseaudio {
+  color: #ffffff;
+  padding: 0 8px;
+  font-size: 13px;
+}
