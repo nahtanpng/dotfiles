@@ -1,0 +1,125 @@
+{
+  // "margin-top": 5,
+  "margin-right": 10,
+  "margin-left": 10,
+
+  "modules-left": ["hyprland/window", "custom/spotify" ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["tray", "pulseaudio", "network", "clock"],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "1": [], "2": [], "3": []
+    }
+  },
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 45,
+    "rewrite": {
+      "": "nathan"
+    },
+    "separate-outputs": true
+  },
+
+  "custom/datetime": {
+    "tooltip-format": "<small><tt>{calendar}</tt></small>",
+    "exec": "LC_TIME=en_US.UTF-8 date '+%a, %d %b • %H:%M'",
+    "interval": 1,
+    "calendar": {
+      "mode"          : "year",
+      "mode-mon-col"  : 3,
+      "weeks-pos"     : "right",
+      "on-scroll"     : 1,
+      "format": {
+        "months":     "<span color='#ffead3'><b>{}</b></span>",
+        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks":      "<span color='#99ffdd'><b>W{:%U}</b></span>",
+        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  "custom/spotify": {
+    "exec": "playerctl -p spotify metadata --format '    {{title}} - {{artist}}' 2>/dev/null | sed 's/&/\\&amp;/g' || echo ''",
+    "interval": 5,
+    "return-type": "text",
+    "on-click": "playerctl -p spotify play-pause"
+  },
+
+  "clock": {
+ "format": "{:%d %B %H:%M  }",
+ "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>",
+  "exec": "LC_TIME=en_US.UTF-8 date '+%a %d %b • %H:%M'",
+  "calendar": {
+    "mode": "year",
+    "mode-mon-col": 3,
+    "weeks-pos": "right",
+    "on-scroll": 1,
+    "on-click-right": "mode",
+    "format": {
+      "months":   "<span color='#d79921'><b>{}</b></span>",   
+      "days":     "<span color='#ebdbb2'><b>{}</b></span>",   
+      "weeks":    "<span color='#fb4934'><b>W{}</b></span>",  
+      "weekdays": "<span color='#fabd2f'><b>{}</b></span>",   
+      "today":    "<span color='#cc241d'><b><u>{}</u></b></span>"
+       }
+  },
+  "actions": {
+    "on-click-right": "mode",
+    "on-click-forward": "tz_up",
+    "on-click-backward": "tz_down",
+    "on-scroll-up": "shift_up",
+    "on-scroll-down": "shift_down"
+  }
+},
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "  {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-ethernet": "   {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-disconnected": "Not connected",
+    "tooltip-format": "  {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "interval": 1,
+    "on-click": "nm-connection-editor"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "custom/sysstatus": {
+  "exec": "~/.config/waybar/scripts/sysstatus.sh",
+    "interval": 5,
+    "return-type": "text"
+  }
+}
