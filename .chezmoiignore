@@ -1,0 +1,17 @@
+# Ignorar caches, logs e arquivos temporários
+.config/*/cache
+.config/*/Cache
+.config/*/logs
+.config/*/Log
+.config/*/history
+
+# Ignorar configurações de apps que geram muitos dados locais
+.config/discord
+.config/Code
+.config/google-chrome
+.config/BraveSoftware
+.config/mozilla
+
+# Ignorar arquivos específicos
+.config/user-dirs.dirs
+.config/user-dirs.locale
