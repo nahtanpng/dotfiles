@@ -33,3 +33,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/home/nathan/.spicetify
 alias dotfiles='/usr/bin/git --git-dir=/home/nathan/.dotfiles/ --work-tree=/home/nathan'
 alias dotfiles='/usr/bin/git --git-dir=/home/nathan/.dotfiles/ --work-tree=/home/nathan'
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
