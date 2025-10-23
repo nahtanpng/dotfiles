@@ -56,7 +56,7 @@
   },
 
   "clock": {
- "format": "{:%d %B %H:%M  }",
+ "format": "{:%d %B %H:%M}",
  "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>",
   "exec": "LC_TIME=en_US.UTF-8 date '+%a %d %b • %H:%M'",
   "calendar": {
@@ -84,8 +84,8 @@
 
   "network": {
     "format": "{ifname}",
-    "format-wifi": "  {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes} ",
-    "format-ethernet": "   {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": " ",
     "format-disconnected": "Not connected",
     "tooltip-format": "  {ifname} via {gwaddri}",
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
@@ -98,7 +98,7 @@
 
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}%    {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": "",
     "format-icons": {
