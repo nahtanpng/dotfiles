@@ -15,3 +15,7 @@
 # Ignorar arquivos específicos
 .config/user-dirs.dirs
 .config/user-dirs.locale
+
+# Backups
+*.bak*
+**/*.bak*

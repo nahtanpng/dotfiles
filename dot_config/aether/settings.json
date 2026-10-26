@@ -1,0 +1,10 @@
+{
+  "includeNeovim": false,
+  "includeVscode": false,
+  "includeZed": true,
+  "includedApps": {
+    "zed": true
+  },
+  "selectedNeovimConfig": "",
+  "wallpaperFolder": "/home/nathan/Wallpapers"
+}

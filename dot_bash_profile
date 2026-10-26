@@ -1,0 +1,12 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+export PATH=$PATH:/home/nathan/.spicetify
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/nathan/.local/share/JetBrains/Toolbox/scripts"
+
