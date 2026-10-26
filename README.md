@@ -15,6 +15,10 @@ My [Omarchy](https://omarchy.org) (Arch + Hyprland) dotfiles, managed with [chez
 | Editor | `~/.config/nvim/` (LazyVim) |
 | Terminals | `~/.config/ghostty/`, `alacritty/`, `kitty/`, `tmux/` |
 | Tools | `~/.config/git/`, `starship.toml`, `btop/`, `lazygit/` |
+| Dev tools | `~/.config/mise/config.toml` (chezmoi, claude, codex, gh, node, opencode) |
+| Zed | `~/.config/zed/settings.json`, `themes/` |
+| Audio | `~/.config/wireplumber/wireplumber.conf.d/` (Bluetooth A2DP auto-connect, KEF LSX II LT no-suspend) |
+| Desktop | `~/.config/mimeapps.list` (default apps), `~/.config/gtk-3.0/bookmarks` (Nautilus sidebar) |
 | Spotify | `~/.config/spicetify/` (`text` theme + marketplace) |
 
 ## Restore on a new machine
@@ -46,7 +50,15 @@ My [Omarchy](https://omarchy.org) (Arch + Hyprland) dotfiles, managed with [chez
    ```
    If it fails with a permission error on `/opt/spotify`, run
    `sudo chmod a+wr /opt/spotify /opt/spotify/Apps -R` and try again.
-7. Open `nvim` once so LazyVim installs the plugins from `lazy-lock.json`.
+7. Install dev tools from the mise config:
+   ```bash
+   mise install
+   ```
+8. Restart audio so the WirePlumber rules load:
+   ```bash
+   systemctl --user restart wireplumber
+   ```
+9. Open `nvim` once so LazyVim installs the plugins from `lazy-lock.json`.
 
 ## Back up changes
 
