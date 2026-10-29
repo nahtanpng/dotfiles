@@ -27,3 +27,6 @@
 -- o.bind("SUPER + SHIFT + S", nil, "omarchy-capture-screenshot")
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
+
+-- Liga/desliga o monitor principal (AOC DP-3) para usar com o MacBook no HDMI
+o.bind("SUPER + SHIFT + L", "Toggle monitor principal", "~/.local/bin/toggle-monitor-principal")

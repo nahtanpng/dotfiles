@@ -1,0 +1,11 @@
+#!/bin/bash
+# Liga/desliga o monitor principal (AOC no DP-3)
+MON="DP-3"
+
+if hyprctl monitors | grep -q "Monitor $MON"; then
+  hyprctl eval "hl.monitor({ output = \"$MON\", disabled = true })"
+  notify-send "Monitor principal desativado"
+else
+  hyprctl reload
+  notify-send "Monitor principal ativado"
+fi
