@@ -48,3 +48,7 @@
 --     column_width = 0.97,
 --   },
 -- })
+
+-- More transparent terminals (focused unfocused). The "terminal" tag is set by
+-- Omarchy for foot, alacritty, kitty, ghostty and its own TUI windows.
+o.window({ tag = "terminal" }, { opacity = "0.90 0.80" })

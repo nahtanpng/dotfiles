@@ -2,13 +2,15 @@
 mode = "dark"
 
 accent = "#b59790"
-selection = "#242324"
-muted = "#584e51"
+selection = "#2a2a2a"
+muted = "#71717a"
 
-background = "#0c0b0c"
-dark_background = "#090809"
-darker_background = "#060606"
-lighter_background = "#242324"
+background = "#121212"
+dark_background = "#0d0d0d"
+darker_background = "#080808"
+lighter_background = "#1e1e1e"
+
+hyprland_active_border = "rgba(78889cee) rgba(dae3e2ee) 45deg"
 
 foreground = "#cfd3cd"
 dark_foreground = "#9b9e9a"
