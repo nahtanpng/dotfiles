@@ -125,7 +125,7 @@ base-size = 12
 # widths accept one CSS-style scalar/list: N, "Y X", "T X B", or "T R B L";
 # individual border-width-top/right/bottom/left keys override the list.
 background       = "{{ background }}"
-background-alpha = 0.65
+background-alpha = 0.45
 text             = "{{ foreground }}"
 border           = "hyprland.active-border"
 border-alpha     = 1.0
@@ -142,7 +142,7 @@ border-alpha     = 1.0
 
 [notifications]
 background       = "{{ background }}"
-background-alpha = 0.65
+background-alpha = 0.45
 text             = "{{ foreground }}"
 # Conventionally matches the Hyprland active-window border. Border accepts
 # either a solid color or the full active-border gradient.
@@ -174,7 +174,7 @@ selected-border-alpha     = 0.25
 # go from 0 (invisible) to 1 (opaque). scrim is the full-screen dim layer
 # behind the card. Clipboard and emojis inherit these tokens.
 background                = "{{ background }}"
-background-alpha          = 0.65
+background-alpha          = 0.45
 text                      = "{{ foreground }}"
 border                    = "hyprland.active-border-foreground"
 border-alpha              = 1.0
